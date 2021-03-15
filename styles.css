@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.controls {
+    
+    padding: 20px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.open {
+    font-size: 16px;
+    padding: 8px 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: #e6e6fa;
+    transition: all .2s linear;
+    cursor: pointer;
+    outline: none;
+}
+
+.open:hover {
+    background: #ccccfd;
+}
+
+.open:active {
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type=file] {
+    display: none;
+}
+
+.carousel {
+    width: 700px;
+    height: 400px;
+    position: relative;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    overflow: hidden;
+}
+
+.carousel__image {
+    
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: all ease-in .7s;
+    z-index: 1;
+    
+}
+
+
+.toggle-left, .toggle-right {
+    width: 50%;
+    height: 400px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.toggle-right {
+    left: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.toggle-left {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.dialog {
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    background: rgba(255, 20, 147, .4);
+    position: absolute;
+    border-radius: 5px;
+}
